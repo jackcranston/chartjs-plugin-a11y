@@ -9,7 +9,7 @@ import {
 
 /**
  * @description sets active point when chart receives focus
- * @param {object} chart
+ * @param {Object} chart
  */
 export const onFocus = (chart) => {
   if (!state.get()) {
@@ -24,7 +24,7 @@ export const onFocus = (chart) => {
 /**
  * @description controls key up events
  * @param {KeyboardEvent} event keyup
- * @param {object} chart
+ * @param {Object} chart
  */
 export const onKeyDown = (event, chart) => {
   const {key} = event.native;

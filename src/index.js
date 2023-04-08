@@ -26,6 +26,7 @@ export default {
 
       handleActivePoint(activePoint);
     }
+
     updateA11yLabel(chart, options);
   },
 };

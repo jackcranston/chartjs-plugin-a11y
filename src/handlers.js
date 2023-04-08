@@ -2,7 +2,7 @@ import state from './state';
 
 /**
  * @description updates the a11y screen reader element with labelled active points
- * @param {object} chart
+ * @param {Object} chart
  */
 export const updateA11yLabel = (chart) => {
   const {datasetIndex, index} = state.get();
@@ -16,9 +16,9 @@ export const updateA11yLabel = (chart) => {
 };
 
 /**
- * @param {object} chart
- * @param {number} datasetIndex
- * @param {number} index
+ * @param {Object} chart
+ * @param {Number} datasetIndex
+ * @param {Number} index
  */
 export const updateActivePoint = (chart, datasetIndex, index) => {
   chart.setActiveElements([{datasetIndex, index}]);
@@ -28,7 +28,7 @@ export const updateActivePoint = (chart, datasetIndex, index) => {
 
 /**
  * @description updates state with current activePoint, or set default state if no activePoint exists
- * @param {object} activePoint
+ * @param {Object} activePoint
  */
 export const handleActivePoint = (activePoint) => {
   if (activePoint && !state.get()) {
@@ -39,9 +39,9 @@ export const handleActivePoint = (activePoint) => {
 };
 
 /**
- * @param {object} chart
- * @param {number} datasetIndex to start from
- * @returns {number} next visible datasetIndex
+ * @param {Object} chart
+ * @param {Number} datasetIndex to start from
+ * @returns {Number} next visible datasetIndex
  */
 export const findNextVisibleDataset = (chart, datasetIndex) => {
   if (datasetIndex === chart.config.data.datasets.length - 1) {
@@ -58,9 +58,9 @@ export const findNextVisibleDataset = (chart, datasetIndex) => {
 };
 
 /**
- * @param {object} chart
- * @param {number} datasetIndex to start from
- * @returns {number} prev visible datasetIndex
+ * @param {Object} chart
+ * @param {Number} datasetIndex to start from
+ * @returns {Number} prev visible datasetIndex
  */
 export const findPrevVisibleDataset = (chart, datasetIndex) => {
   if (datasetIndex === 0) {
@@ -77,11 +77,11 @@ export const findPrevVisibleDataset = (chart, datasetIndex) => {
 };
 
 /**
- * @param {object} chart
- * @param {number} datasetIndex
- * @param {number} index
- * @param {number} currentDataset
- * @param {number} datasetLength
+ * @param {Object} chart
+ * @param {Number} datasetIndex
+ * @param {Number} index
+ * @param {Number} currentDataset
+ * @param {Number} datasetLength
  */
 export const handleRightKey = (
   chart,
@@ -116,11 +116,11 @@ export const handleRightKey = (
 };
 
 /**
- * @param {object} chart
- * @param {number} datasetIndex
- * @param {number} index
- * @param {object} currentDataset
- * @param {number} datasetLength
+ * @param {Object} chart
+ * @param {Number} datasetIndex
+ * @param {Number} index
+ * @param {Object} currentDataset
+ * @param {Number} datasetLength
  */
 export const handleLeftKey = (
   chart,
@@ -153,9 +153,9 @@ export const handleLeftKey = (
 };
 
 /**
- * @param {object} chart
- * @param {number} datasetIndex
- * @param {number} index
+ * @param {Object} chart
+ * @param {Number} datasetIndex
+ * @param {Number} index
  */
 export const handleUpKey = (chart, datasetIndex, index) => {
   const newDatasetIndex = findPrevVisibleDataset(chart, datasetIndex);
@@ -164,9 +164,9 @@ export const handleUpKey = (chart, datasetIndex, index) => {
 };
 
 /**
- * @param {object} chart
- * @param {number} datasetIndex
- * @param {number} index
+ * @param {Object} chart
+ * @param {Number} datasetIndex
+ * @param {Number} index
  */
 export const handleDownKey = (chart, datasetIndex, index) => {
   const newDatasetIndex = findNextVisibleDataset(chart, datasetIndex);

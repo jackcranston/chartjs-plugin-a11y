@@ -1,3 +1,6 @@
+/**
+ * @description creates hidden text element for screen reader
+ */
 export const createA11yElement = () => {
   const a11yElement = document.createElement('div');
   a11yElement.setAttribute('id', 'chartjs-a11y-label');
@@ -9,6 +12,11 @@ export const createA11yElement = () => {
   document.body.appendChild(a11yElement);
 };
 
+/**
+ * @description sets up plugin
+ * @param {Object} chart
+ * @param {Object} options
+ */
 export const setup = (chart, options) => {
   const {canvas} = chart;
   // application is a generic role for an interactive UI component
