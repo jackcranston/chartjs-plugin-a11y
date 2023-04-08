@@ -85,12 +85,10 @@ Install dependencies:
 npm install
 ```
 
-Scripts available
+Build production package:
 
 ```
-npm start
-npm run build:demo
-npm run build:plugin
+npm run build
 ```
 
 ## License
