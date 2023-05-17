@@ -1,6 +1,6 @@
 {
   "name": "chartjs-plugin-a11y",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Accessibility plugin for Chart.js",
   "main": "dist/chartjs-plugin-a11y.min",
   "keywords": [

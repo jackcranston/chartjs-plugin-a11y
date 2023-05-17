@@ -8,7 +8,7 @@ export const createA11yElement = () => {
   a11yElement.setAttribute('tabindex', '-1');
   a11yElement.setAttribute('role', 'status');
   a11yElement.style.cssText =
-    'position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;';
+    'position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;';
   document.body.appendChild(a11yElement);
 };
 

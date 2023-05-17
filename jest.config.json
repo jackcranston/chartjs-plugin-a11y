@@ -1,0 +1,5 @@
+{
+  "testEnvironment": "jsdom",
+  "transform": {},
+  "setupFiles": ["jest-canvas-mock", "<rootDir>/jest.setup"]
+}
