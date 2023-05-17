@@ -2,6 +2,7 @@
   "name": "chartjs-plugin-a11y",
   "version": "0.1.0",
   "description": "Accessibility plugin for Chart.js",
+  "main": "dist/chartjs-plugin-a11y.min",
   "keywords": [
     "chartjs",
     "chart.js",
@@ -13,9 +14,9 @@
   "scripts": {
     "start": "webpack serve --mode development --config webpack.dev.js",
     "build": "rollup -c",
-    "build:demo": "webpack --mode production --config webpack.dev.js"
+    "build:demo": "webpack --mode production --config webpack.dev.js",
+    "test": "node --experimental-vm-modules ./node_modules/.bin/jest"
   },
-  "author": "Jack Cranston",
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.0",
@@ -25,6 +26,9 @@
     "eslint-plugin-es": "^4.1.0",
     "eslint-plugin-html": "^7.1.0",
     "eslint-plugin-markdown": "^3.0.0",
+    "jest": "^29.5.0",
+    "jest-canvas-mock": "^2.5.0",
+    "jest-environment-jsdom": "^29.5.0",
     "rollup": "^3.20.2"
   },
   "peerDependencies": {
