@@ -1,8 +1,20 @@
 {
   "name": "chartjs-plugin-a11y",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Accessibility plugin for Chart.js",
-  "main": "dist/chartjs-plugin-a11y.min",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/chartjs-plugin-a11y.cjs",
+  "module": "./dist/chartjs-plugin-a11y.js",
+  "exports": {
+    ".": {
+      "import": "./dist/chartjs-plugin-a11y.js",
+      "require": "./dist/chartjs-plugin-a11y.cjs"
+    }
+  },
+  "files": [
+    "dist/*"
+  ],
   "keywords": [
     "chartjs",
     "chart.js",
@@ -10,14 +22,11 @@
     "a11y",
     "accessibility"
   ],
-  "type": "module",
   "scripts": {
-    "start": "webpack serve --mode development --config webpack.dev.js",
+    "start": "browser-sync start --server --index ./demo/index.html",
     "build": "rollup -c",
-    "build:demo": "webpack --mode production --config webpack.dev.js",
     "test": "node --experimental-vm-modules ./node_modules/.bin/jest"
   },
-  "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.0",
     "chart.js": "^4.2.1",
@@ -30,8 +39,5 @@
     "jest-canvas-mock": "^2.5.0",
     "jest-environment-jsdom": "^29.5.0",
     "rollup": "^3.20.2"
-  },
-  "peerDependencies": {
-    "chart.js": "^3.9.1"
   }
 }
