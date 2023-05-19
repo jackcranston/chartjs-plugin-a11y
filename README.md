@@ -45,9 +45,6 @@ Alternatively you can use this plugin with a specific chart:
 ```javascript
 var chart = new Chart(ctx, {
   plugins: [ChartjsPluginA11y],
-  options: {
-    // ...
-  },
 });
 ```
 
