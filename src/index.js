@@ -10,6 +10,23 @@ export default {
     // setup required elements
     setup(chart, options);
   },
+  beforeInit: (chart) => {
+    const requiredEvents = [
+      'keydown',
+      'mousemove',
+      'mouseenter',
+      'mouseout',
+      'click',
+    ];
+
+    if (chart.config.options.events) {
+      chart.config.options.events = [
+        ...new Set([...chart.config.options.events, ...requiredEvents]),
+      ];
+    } else {
+      chart.config.options.events = [...requiredEvents];
+    }
+  },
   beforeEvent: (chart, args, options) => {
     const {event} = args;
 
