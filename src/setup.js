@@ -20,7 +20,7 @@ export const createA11yElement = () => {
 export const setup = (chart, options) => {
   const {canvas} = chart;
   // application is a generic role for an interactive UI component
-  canvas.setAttribute('role', 'image');
+  canvas.setAttribute('role', 'application');
   // make canvas tabbable
   canvas.setAttribute('tabindex', '0');
   // set default AT label
