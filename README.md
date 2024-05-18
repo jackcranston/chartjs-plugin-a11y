@@ -2,7 +2,7 @@
 
 An accessibility plugin for Chart.js.
 
-We've done our best at adding as many accessibility features as possible with minimal impact to the core functionality of Chart.js. Whilst this plugin adds improvements chart accessibility programmatically, there are areas such as styles that will still need to be considered when improving the accessibility of your charts.
+Adds many accessibility features with minimal impact to the core functionality of Chart.js. Whilst this plugin adds improvements chart accessibility programmatically, there are areas such as styles that will still need to be considered when improving the accessibility of your charts.
 
 Always refer to the [WCAG guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) when determining whether an application meets the required accessibility standards for your use case.
 
